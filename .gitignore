@@ -1,0 +1,11 @@
+target
+.studio
+.classpath
+.project
+.settings
+mule-project.xml
+.mule
+catalog
+.DS_Store
+activemq-data
+derby.log
