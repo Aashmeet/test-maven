@@ -32,6 +32,8 @@ http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/m
             <db:parameterized-query><![CDATA[SELECT * FROM FLIGHTS]]></db:parameterized-query>
         </db:select>
         <json:object-to-json-transformer doc:name="Object to JSON"/>
+        <set-property propertyName="#['Content-Type']" value="#['application/json']" doc:name="Property"/>
+ 
         <jms:outbound-endpoint queue="flights" connector-ref="Active_MQ" doc:name="JMS"/>
     </flow>
     <flow name="test-mavenFlow2">
